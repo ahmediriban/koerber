@@ -29,12 +29,18 @@ const Email = () => {
     }
     setValidate({ ...validate });
   };
-  const saveEmailToMetadata = () => {
+  const saveEmailToMetadata = async () => {
+    console.log("hi");
+    const accessToken = await getAccessTokenSilently({
+      audience: `https://${configJson.domain}/api/v2/`,
+      scope: "read:current_user",
+    });
+    console.log(accessToken);
     const options = {
       method: "PATCH",
       url: `https://${configJson.domain}/api/v2/users/user_id`,
       headers: {
-        authorization: `Bearer ${getAccessTokenSilently}`,
+        authorization: `Bearer ${accessToken}`,
         "content-type": "application/json",
       },
       data: `{"user_metadata": {"email": ${email}`,

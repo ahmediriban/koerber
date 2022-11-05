@@ -24,7 +24,7 @@ const NavBar = () => {
         <Container style={{ display: "flex", justifyContent: "space-between" }}>
           <NavbarBrand>
             {!isAuthenticated ? (
-              "Home"
+              "Anonymous user"
             ) : (
               <span className="user-info">
                 <img

@@ -3,6 +3,7 @@ import { Container } from "reactstrap";
 
 import Navbar from "../components/Navbar";
 import Email from "../components/Email";
+import Posts from "../components/Posts";
 
 const Home = () => (
   <React.Fragment>
@@ -10,6 +11,8 @@ const Home = () => (
     <hr />
     <Container>
       <Email />
+      <hr />
+      <Posts />
     </Container>
   </React.Fragment>
 );
