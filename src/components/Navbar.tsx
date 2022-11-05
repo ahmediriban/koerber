@@ -13,6 +13,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const NavBar = () => {
   const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const logoutWithRedirect = () =>
+    logout({
+      returnTo: window.location.origin + "/logout",
+    });
 
   return (
     <div className="nav-container">
@@ -52,7 +56,7 @@ const NavBar = () => {
                   id="qsLoginBtn"
                   color="primary"
                   className="btn-margin"
-                  onClick={() => logout()}
+                  onClick={() => logoutWithRedirect()}
                 >
                   Log out
                 </Button>
