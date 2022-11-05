@@ -71,5 +71,12 @@
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.8.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@auth0/auth0-react": "^1.12.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "react-router": "^6.4.3",
+    "react-router-dom": "^6.4.3",
+    "reactstrap": "^9.1.5"
+  }
 }

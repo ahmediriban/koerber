@@ -6,7 +6,10 @@
     "moduleResolution": "node",
     "outDir": "dist",
     "target": "ESNext",
-    "sourceMap": true
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "include": ["src"]
 }
