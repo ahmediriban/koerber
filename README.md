@@ -26,7 +26,7 @@
 `yarn run start-dev`
 
 * Build app continuously (HMR enabled)
-* App served @ `http://localhost:8080`
+* App served @ `http://localhost:3000`
 
 **Production**
 
