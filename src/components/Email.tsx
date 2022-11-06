@@ -62,10 +62,16 @@ const Email = () => {
     const getUserMetadata = async () => {
       const domain = configJson.domain;
       try {
-        const accessToken = await getAccessTokenSilently({
+        const accessToken = getAccessTokenSilently({
           audience: `https://${domain}/api/v2/`,
           scope: "read:current_user",
-        });
+        })
+          .then((e) => {
+            console.log(e);
+          })
+          .catch((e) => {
+            console.log(e.message);
+          });
 
         const userDetailsByIdUrl = `https://${domain}/api/v2/users/${user.sub}`;
 

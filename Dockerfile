@@ -7,7 +7,7 @@ COPY . .
 
 # ==== BUILD =====
 # To build gifsicle it depends on -This is for image-webpack-loader-
-RUN apk add --no-cache autoconf automake file g++ libtool make nasm libpng-dev
+RUN apk add autoconf automake file g++ libtool make nasm libpng-dev
 # Install dependencies (npm ci makes sure the exact versions in the lockfile gets installed)
 RUN yarn install
 # Build the app
